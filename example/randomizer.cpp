@@ -27,23 +27,23 @@ std::string as_string(color c)
 
 int main()
 {
-	// roll dice
-	int number_of_roll = spae::default_randomizer().generate_int(1, 6);
-	std::cout << number_of_roll << std::endl;
+    // roll dice
+    int number_of_roll = spae::default_randomizer().generate_int(1, 6);
+    std::cout << number_of_roll << std::endl;
 
-	// generate random enum value
+    // generate random enum value
     const color random_color = spae::default_randomizer().generate_integer(
-              	              	color::range_min,
-                            	color::range_max);
+                                color::range_min,
+                                color::range_max);
     std::cout << as_string(random_color) << std::endl;
 
-	// select random index
-	const std::vector<std::string> candidates = {
-		"Awesome!!",
-		"Great!",
-		"Good",
-		"Bad"
-	};
-	const std::size_t random_index = spae::default_randomizer().select(candidates);
-	std::cout << candidates.at(random_index) << std::endl;
+    // select random index
+    const std::vector<std::string> candidates = {
+        "Awesome!!",
+        "Great!",
+        "Good",
+        "Bad"
+    };
+    const std::size_t random_index = spae::default_randomizer().select(candidates);
+    std::cout << candidates.at(random_index) << std::endl;
 }
